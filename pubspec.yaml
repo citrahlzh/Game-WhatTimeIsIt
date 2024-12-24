@@ -1,0 +1,43 @@
+name: game_whattimeisit
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.4
+  equatable: ^2.0.3
+  flutter:
+    sdk: flutter
+  audioplayers: ^6.1.0
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets: 
+    - assets/
+  fonts:
+    - family: Halo Dek
+      fonts:
+        - asset: assets/fonts/HaloDek.ttf
+    - family: Spooky Scary Creepy
+      fonts:
+        - asset: assets/fonts/SpookyScaryCreepy.ttf
+    - family: Super Earthly
+      fonts:
+        - asset: assets/fonts/SuperEarthly.ttf
+    - family: Newray
+      fonts:
+        - asset: assets/fonts/Newray.otf
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
