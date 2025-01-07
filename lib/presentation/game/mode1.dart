@@ -271,12 +271,12 @@ class GameMode1 extends StatelessWidget {
                   return const Center(child: CircularProgressIndicator());
                 }
 
-                return SizedBox.expand(
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 25),
+                return Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 25),
+                    child: Center(
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Row(
