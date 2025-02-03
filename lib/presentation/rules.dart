@@ -17,16 +17,18 @@ class Rules extends StatelessWidget {
           child: Scaffold(
             backgroundColor: Colors.transparent,
             appBar: AppBar(
-              toolbarHeight: 100,
+              toolbarHeight: 110,
               backgroundColor: const Color(0x4CEAD8B1),
               centerTitle: true,
               title: const Padding(
                 padding: EdgeInsets.fromLTRB(8.0, 20.0, 8.0, 8.0),
+
+                // Header
                 child: Text(
                   "ATURAN PERMAINAN",
                   style: TextStyle(
                       fontFamily: 'Super Earthly',
-                      fontSize: 70,
+                      fontSize: 80,
                       color: Color(0xFFEAD8B1),
                       shadows: [
                         Shadow(
@@ -49,29 +51,26 @@ class Rules extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              leading: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Transform.translate(
-                  offset: const Offset(25.0, 0.0),
-                  child: Container(
-                    width: 70,
-                    height: 70,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFEAD8B1),
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Center(
-                        child: Icon(Icons.arrow_back,
-                            color: Color(0xFF1E1E1E), size: 50)),
+
+              // Back Button
+              leading: Transform.translate(
+                offset: const Offset(30.00, 0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Image(
+                    height: 100,
+                    image: AssetImage('../../assets/images/arrow_back.png'),
                   ),
                 ),
               ),
+
+              // Logo
               actions: [
                 Transform.translate(
-                  offset: const Offset(-25.0, 0.0),
-                  child: Image.asset('../assets/images/Logo.png'),
+                  offset: const Offset(-30.0, 0.0),
+                  child: Image.asset('../../assets/images/logo.png'),
                 ),
               ],
             ),
@@ -79,7 +78,7 @@ class Rules extends StatelessWidget {
               child: DecoratedBox(
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('../assets/images/image2.png'),
+                      image: AssetImage('../../assets/images/image2.png'),
                       fit: BoxFit.cover,
                       opacity: 0.3),
                 ),
@@ -100,6 +99,8 @@ class Rules extends StatelessWidget {
                               ),
                             )),
                       ),
+
+                      // Rules
                       Center(
                         child: SizedBox(
                           width: 1120,

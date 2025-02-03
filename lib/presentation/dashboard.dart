@@ -16,7 +16,7 @@ class DashboardPage extends StatelessWidget {
             child: DecoratedBox(
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('../assets/images/image1.png'),
+                      image: AssetImage('../../assets/images/image1.png'),
                       fit: BoxFit.contain,
                       opacity: 0.3),
                   gradient: LinearGradient(
@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
                       end: Alignment.bottomCenter)),
               child: Center(
                 child: SizedBox(
-                  height: 450,
+                  height: 500,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,6 +40,8 @@ class DashboardPage extends StatelessWidget {
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                         ).createShader(bounds),
+
+                        // Title
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -47,7 +49,7 @@ class DashboardPage extends StatelessWidget {
                                 'WHAT TIME IS IT',
                                 style: TextStyle(
                                     fontFamily: 'Halo Dek',
-                                    fontSize: 90,
+                                    fontSize: 110,
                                     color: Colors.white,
                                     shadows: [
                                       Shadow(
@@ -74,7 +76,7 @@ class DashboardPage extends StatelessWidget {
                                   '?',
                                   style: TextStyle(
                                       fontFamily: 'Halo Dek',
-                                      fontSize: 125,
+                                      fontSize: 150,
                                       color: Colors.white,
                                       shadows: [
                                         Shadow(
@@ -99,9 +101,11 @@ class DashboardPage extends StatelessWidget {
                               )
                             ]),
                       ),
+
+                      // 'Mainkan' Button
                       SizedBox(
-                        width: 600,
-                        height: 100,
+                        width: 700,
+                        height: 120,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -123,7 +127,7 @@ class DashboardPage extends StatelessWidget {
                               'MAINKAN',
                               style: TextStyle(
                                   fontFamily: 'Super Earthly',
-                                  fontSize: 50,
+                                  fontSize: 65,
                                   color: Color(0xFFEAD8B1),
                                   shadows: [
                                     Shadow(
@@ -136,9 +140,11 @@ class DashboardPage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
+
+                      // 'Cara Main' Button
                       SizedBox(
-                        width: 600,
-                        height: 100,
+                        width: 700,
+                        height: 120,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -159,7 +165,7 @@ class DashboardPage extends StatelessWidget {
                               'ATURAN PERMAINAN',
                               style: TextStyle(
                                   fontFamily: 'Super Earthly',
-                                  fontSize: 50,
+                                  fontSize: 65,
                                   color: Color(0xFFEAD8B1),
                                   shadows: [
                                     Shadow(
@@ -177,10 +183,12 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
           ),
+
+          // Sound Icon
           floatingActionButton: BlocBuilder<BacksoundBloc, BacksoundState>(
               builder: (context, state) {
             return Padding(
-              padding: const EdgeInsets.fromLTRB(0, 30, 45, 0),
+              padding: const EdgeInsets.fromLTRB(0, 50, 60, 0),
               child: FloatingActionButton(
                 onPressed: () {
                   context.read<BacksoundBloc>().add(ToggleSoundEvent());
@@ -191,7 +199,7 @@ class DashboardPage extends StatelessWidget {
                 child: Icon(
                   state.isSoundOn ? Icons.volume_up : Icons.volume_off,
                   color: Colors.white,
-                  size: 70,
+                  size: 100,
                 ),
               ),
             );
