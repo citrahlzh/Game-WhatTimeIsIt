@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Color for Clock
 final List<Map<String, Color>> clockColors = [
   {'color1': const Color(0xFF7A2A4F), 'color2': const Color(0xA5FFC0DE)},
   {'color1': const Color.fromARGB(255, 42, 57, 122), 'color2': const Color.fromARGB(163, 192, 227, 255)},

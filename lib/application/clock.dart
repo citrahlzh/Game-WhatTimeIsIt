@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'clock_color.dart';
 
+// Clock Widget
 class ClockPainter extends CustomPainter {
   final int X;
   final int Y;
